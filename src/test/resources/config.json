@@ -1,0 +1,18 @@
+{
+  "port": 3000,
+  "encoding": "UTF-8",
+  "filters": [
+    "com.qianlei.webserver.filter.LogFilter",
+    "com.qianlei.webserver.filter.ResponseHeaderFilter",
+    "com.qianlei.webserver.filter.GZipFilter"
+  ],
+  "servlets": [
+    {
+      "name": "com.qianlei.webserver.servlet.StaticResourceServlet",
+      "param": {
+        "root": "html"
+      },
+      "path": ".*"
+    }
+  ]
+}
